@@ -12,7 +12,7 @@
 <body>
 
 
-    <div class="cartao">
+    <div class="cartao" id="cartao">
         <div class="">
             <header class="profile-pic">
                 <img src="https://github.com/gustavocodigo.png" width="90" class="profile-picture">
@@ -66,7 +66,11 @@
                     </div>
 
                 </div>
-                <p class="message">Após um café da manhã revigorante, ajustei meu cabelo cuidadosamente em um estilo que me agrada. Escolhi um conjunto de roupas confortáveis e práticas, que refletem minha personalidade e minha paixão pela tecnologia. Optei por uma camiseta simples e jeans, priorizando o conforto e a praticidade. É claro que não poderia esquecer meus óculos, que são essenciais para manter minha visão aguçada enquanto me aventuro na programação e observo todos os detalhes minuciosos. </p>
+                <p class="message">Após um café da manhã revigorante, ajustei meu cabelo cuidadosamente em um estilo que
+                    me agrada. Escolhi um conjunto de roupas confortáveis e práticas, que refletem minha personalidade e
+                    minha paixão pela tecnologia. Optei por uma camiseta simples e jeans, priorizando o conforto e a
+                    praticidade. É claro que não poderia esquecer meus óculos, que são essenciais para manter minha
+                    visão aguçada enquanto me aventuro na programação e observo todos os detalhes minuciosos. </p>
 
                 <div class="buttons-component">
                     <button onclick="onClickt1()">CONTATO</button>
@@ -79,7 +83,7 @@
 
         <div id="contacts" class="hide">
 
-         
+
             <ul>
                 <li><b>Discord</b>: gustavocodigo</li>
                 <li><a href="https://www.linkedin.com/in/jos%C3%A9-gustavo-b8aa70238/">Linkedin</a></li>
@@ -160,6 +164,15 @@
         clearNavButtonsSelected()
     }
 
+
+
+    window.onload = () => {
+        let cartao = document.getElementById("cartao");
+        let altura = cartao.offsetHeight
+        document.getElementById("cartao").style.minHeight = altura + "px"
+
+    }
+   
 
 
 </script>

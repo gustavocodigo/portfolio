@@ -11,6 +11,10 @@
 }
 
 
+div {
+    opacity: 1;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -177,5 +181,7 @@ button:active {
 
 .hide {
     display: none;
+    transition: 1s;
+    opacity: 0;
 }
 
