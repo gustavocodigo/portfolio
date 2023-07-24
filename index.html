@@ -73,8 +73,8 @@
                     visão aguçada enquanto me aventuro na programação e observo todos os detalhes minuciosos. </p>
 
                 <div class="buttons-component">
-                    <button onclick="onClickt1()">CONTATO</button>
-                    <button onclick="onClickt2()">DISCORD</button>
+                    <button onclick="onClickt1()">COMUNIDADE</button>
+                    <button onclick="onClickt2()">MEU DISCORD</button>
                 </div>
             </div>
 
@@ -161,9 +161,18 @@
         window.location.href = "https://discord.gg/4TSZb46J";
     }
     function onClickt2() {
-        clearNavButtonsSelected()
+        window.location.href = "https://discord.gg/4TSZb46J";
     }
 
+
+
+    window.onload = () => {
+        let cartao = document.getElementById("cartao");
+        let altura = cartao.offsetHeight
+        document.getElementById("cartao").style.minHeight = altura + "px"
+
+    }
+   
 
 
     window.onload = () => {
