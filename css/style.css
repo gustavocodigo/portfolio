@@ -144,7 +144,7 @@ button:active {
     padding: 12px;
     border-radius: 20px 2px;
     display: flex;
-    width: calc(100% - 24px);
+    width: 100%;
 }
 
 
@@ -154,19 +154,26 @@ button:active {
    color: white;
   margin: 2px 10px;
     cursor: pointer;
-    border-bottom: 4px solid rgba(185, 185, 248, 0);
+    /*border-bottom: 4px solid rgba(185, 185, 248, 0);*/
     font-weight: 700;
-    transition: 1s;
+    transition: 0.25s;
     display: flex;
     align-items: center;
+    
+    background-image: linear-gradient(to right, rgb(185, 185, 248) 100%, transparent 50%);
+  background-position: right bottom;
+  background-size: 0% 2px; /* ajuste a espessura da borda conforme necessário */
+  background-repeat: no-repeat;
 }
 
 .navbutton-focuses{
 
-    border-bottom: 4px solid rgb(185, 185, 248);
+    /*border-bottom: 4px solid rgb(185, 185, 248);*/
     transition: 0.5s;
     
-
+  background-position: left bottom;
+  background-size: 100% 2px; /* ajuste a espessura da borda conforme necessário */
+  background-repeat: no-repeat;
 }
 
 #githubpj {
