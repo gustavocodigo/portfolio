@@ -27,6 +27,7 @@ class Mario {
                     this.state = mario_states.FALL_DOWN;
                 }
                 break;
+                
             case mario_states.FALL_DOWN:
                 this.speedY += 2;
                 if (this.positionY > (this.card.clientHeight)-240) {
@@ -52,7 +53,7 @@ class Mario {
         const dir = this.speedX < 0 ? -1 : 1
 
 
-        this.mario.style.top = document.getElementById("header").getBoundingClientRect().top-32 + "px";
+        this.mario.style.top = document.getElementById("header").getBoundingClientRect().top+8 + "px";
         this.mario.style.left = document.getElementById("header").getBoundingClientRect().left + "px";
         this.mario.childNodes[1].style.transform = "scaleX("+dir+")"
         this.mario.style.transform = "scaleX("+dir+") translate(" + this.positionX*dir + "px, " + this.positionY + "px)";
