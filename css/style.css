@@ -235,7 +235,14 @@ button:active {
    
     z-index: 999;
     animation-iteration-count: 1;
-    color: rgb(255, 244, 244)
+    color: rgb(255, 244, 244);
+    display: none;
+}
+
+
+#mario > img {
+	display: block;
+	text-align: center;
 }
 
 
