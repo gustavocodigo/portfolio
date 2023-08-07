@@ -52,7 +52,7 @@ class Mario {
         const dir = this.speedX < 0 ? -1 : 1
 
 
-        this.mario.style.top = document.getElementById("header").getBoundingClientRect().top-26 + "px";
+        this.mario.style.top = document.getElementById("header").getBoundingClientRect().top-32 + "px";
         this.mario.style.left = document.getElementById("header").getBoundingClientRect().left + "px";
         this.mario.childNodes[1].style.transform = "scaleX("+dir+")"
         this.mario.style.transform = "scaleX("+dir+") translate(" + this.positionX*dir + "px, " + this.positionY + "px)";
