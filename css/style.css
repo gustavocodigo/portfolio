@@ -1,7 +1,16 @@
-:root
-{
-    --color-main: #736cff;
+:root {
+    --color-main: #1768ff;
 }
+
+
+
+
+@font-face {
+    font-family: 'SuaFontePersonalizada';
+    src: url('URL-da-sua-fonte.woff2') format('woff2'),
+        url('URL-da-sua-fonte.woff') format('woff');
+}
+
 
 
 
@@ -15,7 +24,9 @@ header {
     display: flex;
     align-items: center;
     gap: 20px;
+    position: relative;
 }
+
 body {
     display: flex;
     align-items: center;
@@ -23,24 +34,52 @@ body {
     height: 100svh;
     margin: 0;
     font-size: 12px;
-  
+
     background-size: 100% 100%;
-    transition: 1s;
-   
+    
+
+    font-family: 'Archivo', sans-serif;
+
+
+
 }
 
 .title {
     font-size: 22px;
 }
 
-.contacts
-{
+.contacts {
     height: 100%;
 }
 
 
+
+
+
+
+
+@keyframes demo {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Posição inicial e final (sem salto) */
+    }
+
+    50% {
+        transform: translateY(-100px);
+        /* Altura máxima do salto */
+    }
+
+}
+
+
+
+
+
 .cartao {
-    
+
+
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -54,20 +93,22 @@ body {
 
 
     flex-direction: column;
-   
-   
+
+
 
     border-top: 10px solid var(--color-main);
 
 }
 
 .message {
+
     font-size: 14px;
 }
 
 .buttons-component {
+
     display: flex;
-width: 100%;
+    width: 100%;
     justify-content: space-around;
 
 }
@@ -106,7 +147,8 @@ button:active {
 .stacks {
     display: flex;
     justify-content: left;
-   
+
+
     gap: 12px;
 }
 
@@ -126,7 +168,7 @@ button:active {
 
 .profile-picture {
     border-radius: 50% 20%;
-    
+
 }
 
 .navigation {
@@ -142,29 +184,31 @@ button:active {
 
 
 .navbutton {
-   color: white;
-  margin: 2px 10px;
+    color: white;
+    margin: 2px 10px;
     cursor: pointer;
     /*border-bottom: 4px solid rgba(185, 185, 248, 0);*/
     font-weight: 700;
     transition: 0.25s;
     display: flex;
     align-items: center;
-    
+
     background-image: linear-gradient(to right, rgb(185, 185, 248) 100%, transparent 50%);
-  background-position: right bottom;
-  background-size: 0% 2px; /* ajuste a espessura da borda conforme necessário */
-  background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 0% 2px;
+    /* ajuste a espessura da borda conforme necessário */
+    background-repeat: no-repeat;
 }
 
-.navbutton-focuses{
+.navbutton-focuses {
 
     /*border-bottom: 4px solid rgb(185, 185, 248);*/
     transition: 0.5s;
-    
-  background-position: left bottom;
-  background-size: 100% 2px; /* ajuste a espessura da borda conforme necessário */
-  background-repeat: no-repeat;
+
+    background-position: left bottom;
+    background-size: 100% 2px;
+    /* ajuste a espessura da borda conforme necessário */
+    background-repeat: no-repeat;
 }
 
 #githubpj {
@@ -183,3 +227,24 @@ button:active {
     opacity: 0;
 }
 
+
+
+#mario {
+    position: fixed;
+    left: 0px;
+   
+    z-index: 999;
+    animation-iteration-count: 1;
+    color: rgb(255, 244, 244)
+}
+
+
+#mario > h1{
+  background-color: var(--color-main);
+  padding: 6px;
+  font-size: 10px;
+  text-align: center;
+  position: relative;
+  top: 50px;
+  border-radius: 2px;
+}

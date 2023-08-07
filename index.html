@@ -6,7 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>José Gustavo </title>
+    <link href="https://fonts.googleapis.com/css2?family=SuaFontePersonalizada&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo&family=Inter:wght@400;700&family=Roboto+Mono:ital,wght@0,100;1,100&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
@@ -14,14 +23,21 @@
 
     <div class="cartao" id="cartao">
         <div class="">
-            <header class="profile-pic">
+
+          
+            <header id="header" class="profile-pic">
+                <div id="mario">
+                    <h1> Gustavo</h1>
+
+                    <img height=100 src="./assets/8bit-mario-runing.gif">
+                </div>
                 <img src="https://github.com/gustavocodigo.png" width="90" class="profile-picture">
 
                 <div>
                     <h1 class="title">José Gustavo</h1>
-                    
-                        Sou desenvolvedor web
-                    
+
+                    Sou desenvolvedor web
+
                 </div>
 
             </header>
@@ -53,17 +69,17 @@
                 <h2>Minhas Stacks</h2>
                 <div class="stacks">
 
-                    <img width="40"
+                    <img height="40"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
-                    <img width="50"
+                    <img height="40"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />
 
-                    <img width="50"
+                    <img height="40"
                         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
 
                     <div class="msg">
-                   
-                   			<b>+</b> Frameworks
+
+                        <b>+</b> Frameworks
                     </div>
 
                 </div>
@@ -111,7 +127,6 @@
 
 
 
-
 </body>
 
 </html>
@@ -122,7 +137,7 @@
 <script>
 
     function clearNavButtonsSelected() {
-        let navigationElement = document.getElementById("navigation");
+        let navigationElement = document.getElementById("header");
 
         // Check if the element with the ID "navigation" exists
         if (!navigationElement) {
@@ -173,7 +188,7 @@
         document.getElementById("cartao").style.minHeight = altura + "px"
 
     }
-   
+
 
 
     window.onload = () => {
@@ -182,7 +197,10 @@
         document.getElementById("cartao").style.minHeight = altura + "px"
 
     }
-   
+
+  // Elemento HTML do Mario
+  
+  </script>
 
 
-</script>
+<script src="./script.js"></script>
