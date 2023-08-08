@@ -258,3 +258,31 @@ button:active {
   border-radius: 2px;
 }
 
+
+
+#pitchy {
+    position: fixed;
+    left: 0px;
+   
+    z-index: 999;
+    animation-iteration-count: 1;
+    color: rgb(255, 244, 244);
+    display: none;
+}
+
+
+#pitchy > img {
+	display: block;
+	text-align: center;
+}
+
+
+#pitchy > h1{
+  background-color: var(--color-main);
+  padding: 6px;
+  font-size: 10px;
+  text-align: center;
+  position: relative;
+  top: 6px;
+  border-radius: 2px;
+}
