@@ -1,5 +1,5 @@
 :root {
-    --color-main: #5686df;
+    --color-main: #7888ff;
 }
 
 
@@ -48,12 +48,14 @@ body {
     font-size: 22px;
 }
 
-.contacts {
-    height: 100%;
+#contacts {
+    margin-top: 12px;
 }
 
 
-
+#contacts > ul > li {
+	margin-top: 8px;
+}
 
 
 
