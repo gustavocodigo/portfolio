@@ -67,6 +67,89 @@ class Mario {
     }
 }
 
+
+
+
+
+const PEACH_RIGHT = 'PR'
+
+
+class Peach {
+    constructor(name) {
+        this.positionX = 0;
+        this.positionY = 0;
+        this.speedX = 4;
+        this.speedY = 0;
+        this.marioEl = document.getElementById('pitchy');
+        this.mario = this.marioEl.cloneNode(true)
+        this.marioEl.parentNode.appendChild(this.mario)
+        this.mario.style.display="block"
+        this.state = mario_states.RUNNING_LEFT;
+        this.header = document.getElementById("header")
+
+        // Corrigindo a definição da posição vertical inicial
+        this.mario.style.top = document.getElementById("header").getBoundingClientRect().top + "px";
+        this.mario.style.left = document.getElementById("header").getBoundingClientRect().left + "px";
+        this.card =  document.getElementById("cartao")
+        if (name)this.mario.childNodes[1].innerText=name
+    }
+
+    tick() {
+        switch (this.state) {
+            case mario_states.RUNNING_LEFT:
+                if (this.positionX > this.header.clientWidth*0.9 - 50) {
+                    this.state = PEACH_RIGHT
+                }
+                break;
+                
+            case PEACH_RIGHT:
+            		this.speedX = -3.6
+            		if ( this.positionX < 0)
+            		this.state = mario_states.FALL_DOWN
+            	break;
+                
+            case mario_states.FALL_DOWN:
+                this.speedY += 2;
+                if (this.positionY > 400) {
+                    this.state = mario_states.SPEEDER_MAN
+                    this.speedY = 0
+                    this.speedX = -3.6;
+
+                }
+                break;
+        }
+
+
+
+        return this.updateMario();
+    }
+
+    updateMario() {
+
+       
+        this.positionX += this.speedX;
+        this.positionY += this.speedY;
+
+        const dir = this.speedX < 0 ? 1 : -1
+
+
+        this.mario.style.top = document.getElementById("header").getBoundingClientRect().top+28 + "px";
+        this.mario.style.left = document.getElementById("header").getBoundingClientRect().left + "px";
+        this.mario.childNodes[1].style.transform = "scaleX("+dir+")"
+        this.mario.style.transform = "scaleX("+dir+") translate(" + this.positionX*dir + "px, " + this.positionY + "px)";
+        const out = this.mario.positionX < -800
+        if ( out ) this.mario.deleteNode()
+        return out
+    }
+}
+
+
+
+
+
+
+
+
 const mario = new Mario();
 
 
@@ -138,9 +221,17 @@ setTimeout( ()=> {
 	marios.push(new Mario("Css"))
 },720*19)
 
+
+
+
 setTimeout( ()=> {
-	
-},720*20)
+	marios.push(new Peach("BUG"))
+},726*20.4)
+
+
+
+
+
 
 
 
