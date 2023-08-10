@@ -181,5 +181,7 @@ document.addEventListener("DOMContentLoaded", function() {
     element.style.minHeight = element.clientHeight+"px";
     const text = element.innerText;
     element.innerText = ""; // Limpa o conteúdo original do elemento
-    typewriterEffect(text, element);
+    setTimeOut(()=>{
+        typewriterEffect(text, element);
+    },1000*8)
 });
